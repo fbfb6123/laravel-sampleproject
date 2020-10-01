@@ -12,11 +12,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $authors = ['田中太郎','山田太郎','佐藤太郎'];
+        foreach ($authors as $author) {
             DB::table(
                 'users')->insert([
-                'name' => Str::random(10),
-                'email' => Str::random(10).'@gmail.com',
+                'name' => $author,
+                'email' => Str::random(10) . '@gmail.com',
                 'password' => Hash::make('password'),
             ]);
+          }
         }
     }
