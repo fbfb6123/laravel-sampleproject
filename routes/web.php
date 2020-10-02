@@ -10,6 +10,8 @@ Route::get('/', function () {
 });
 Route::get('/hello','HelloController@index');
 Route::post('/hello', 'HelloController@index');
+Route::get('/hello','HelloController@create');
+Route::post('/hello', 'HelloController@store');
 //});
 
 Auth::routes();

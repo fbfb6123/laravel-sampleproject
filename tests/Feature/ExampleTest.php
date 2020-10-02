@@ -27,6 +27,12 @@ class ExampleTest extends TestCase
         //指定したpathに用意したテキストが順に従って登場することを確認
         //$this->get('/hello')->assertSeeInOrder(['<html','<head','<body','<h1>']);
 
-        $data
+        for($i = 0;$i < 100;$i++)
+        {
+            factory(UserTest::class)->create();
+        }
+        $count = UserTest::get()->count();
+        $usertest = UserTest::find(rand(1, $count));
+        $data = $
     }
 }
