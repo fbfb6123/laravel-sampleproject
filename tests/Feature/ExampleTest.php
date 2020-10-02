@@ -14,8 +14,12 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        //rootpathに問題なくアクセス出来ているか
         $this->get('/')->assertStatus(200);
+        //helloに正常にアクセスで消え入るか
         $this->get('/hello')->assertOK();
+        //hogeという存在しないページにアクセスした際に404でページが検出されるか
+        $this->get('/hoge')->assertStatus(404);
 
     }
 }
