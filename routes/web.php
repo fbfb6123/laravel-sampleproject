@@ -8,7 +8,7 @@ use App\Http\Middleware\HelloMiddleware;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hello','HelloController@index');
+Route::get('/hello','HelloController@index')->name('top');
 Route::post('/hello', 'HelloController@index');
 Route::get('/hello/create','HelloController@create');
 Route::post('/hello/create', 'HelloController@store');

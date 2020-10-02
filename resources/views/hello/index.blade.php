@@ -5,7 +5,6 @@
 </head>
 <body>
 <h1>Hello/Index</h1>
-<p>{{!!$msg!!}}</p>
 <form action="/hello" method="post">
     @csrf
     <div>NAME:<input type="text" name="name"></div>
