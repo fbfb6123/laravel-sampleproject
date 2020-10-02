@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserTestTable extends Migration
+class CreateTempTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateUserTestTable extends Migration
      */
     public function up()
     {
-        Schema::create('usertest', function (Blueprint $table) {
+        Schema::create('temp_tables', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('mail');
-            $table->integer('age');
+            $table->string('title', 20);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateUserTestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usertest');
+        Schema::dropIfExists('temp_tables');
     }
 }

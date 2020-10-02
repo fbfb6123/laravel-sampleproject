@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserTest extends Model
+class TempTable extends Model
 {
-
+    //
 }
