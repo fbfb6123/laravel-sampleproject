@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Hello/Index</h1>
-<form action="/hello/store" method="post">
+<form action="/hello/create" method="post">
     @csrf
     <div>NAME:<input type="text" name="name"></div>
     <div>MAIL:<input type="text" name="mail"></div>
